@@ -11,9 +11,11 @@ class authorController{
 
   async getAuthorById(req, res){
     const author = await authorModel.findById(req.params.id)
-    const articles = await articleModel.findMany(author.id)
+    const articles = await articleModel.findMany(author)
     author['articles'] = articles
-    res.status(201).json({author: author})
+    res.status(201).json({
+      author: author,
+    })
   }
 }
 

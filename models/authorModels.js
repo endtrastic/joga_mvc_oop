@@ -2,7 +2,7 @@ const BaseSQLModel = require('./base')
 
 class AuthorModel extends BaseSQLModel {
     constructor() {
-        super('article');
+        super('author');
     }
 
     async findMany(id){
