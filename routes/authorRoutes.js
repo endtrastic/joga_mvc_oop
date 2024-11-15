@@ -1,10 +1,12 @@
 // Defining important stuff
 const express = require('express');
 const router = express.Router();
-const authorController = require('../controllers/authorController');
+const authorControllerClass = require('../controllers/authorController');
 
-// Route to get author by ID and show their articles
-router.get('/:id', authorController.AuthorsID);
+const authorController = new authorControllerClass() 
+
+// Route to get author by ID 
+router.get('/author/:id', (req, res) => authorController.getAuthorById(req, res));
 
 // Exportin :()
 module.exports = router;

@@ -6,7 +6,7 @@ const con =  mysql.createConnection({
     host: 'localhost',
     user: 'arm',
     password: 'qwerty',
-    database: 'joga_mysql'
+    database: 'joga_mysql',
 });
 
 con.connect(function (err) {
